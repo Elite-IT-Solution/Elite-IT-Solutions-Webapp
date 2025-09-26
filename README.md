@@ -7,6 +7,7 @@ Main website
 ![Alt text](images/main.png)
 
 Admin-portal website
+The credentials can be found inside webapp/admin-portal-website/index.php
 ![Alt text](images/admin-portal.png)
 
 Tools-legacy website
