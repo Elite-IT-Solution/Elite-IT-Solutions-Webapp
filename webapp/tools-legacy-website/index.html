@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Company — Help & Tips</title>
+  <style>
+    :root{
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0b74de;
+      --shadow: 0 6px 18px rgba(11,20,50,0.08);
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{background:var(--bg); margin:0; padding:40px; color:#111827}
+    .container{max-width:900px;margin:0 auto}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+    h1{font-size:20px;margin:0}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    p.muted{color:var(--muted);margin:8px 0 16px}
+    .hint{
+      border-radius:10px;border:1px dashed #e5e7eb;padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent);
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    }
+    .hint-text{max-width:76%}
+    .reveal-btn{
+      background:transparent;border:1px solid var(--accent);color:var(--accent);padding:8px 12px;border-radius:8px;cursor:pointer;
+      font-weight:600;
+    }
+    .reveal-btn:active{transform:translateY(1px)}
+    footer{margin-top:16px;color:var(--muted);font-size:13px}
+    pre.source{background:#0f1724;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto;margin-top:12px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Elite IT Solutions — Help & Tips</h1>
+        <div class="muted">Internal tools and legacy pages</div>
+      </div>
+    </header>
+
+    <main class="card" role="main" aria-labelledby="hint-heading">
+      <h2 id="hint-heading" style="margin-top:0;font-size:16px">Troubleshooting: Admin access</h2>
+      <p class="muted">If you are having trouble locating the admin portal credentials, visit the GitHub page of Elite IT Solutions.</p>
+
+      <div class="hint" aria-live="polite">
+        <div class="hint-text">
+          <strong>Elite IT Solutions Webapp:</strong> Our legacy configuration and credentials history are archived on a public developer mirror. It may contain the information you need — check the project's GitHub page. To access the GitHub page, please go to Elite-IT-Solution/Elite-IT-Solutions-Webapp.
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:12px">
+       
+      </p>
+
+      <div id="hintLink" style="margin-top:12px;display:none;">
+        <p style="margin:0 0 8px"><strong>Repository:</strong></p>
+        <pre class="source" id="linkOutput">[Click "Reveal GitHub link"]</pre>
+      </div>
+
+      <footer>
+        <small>Need more help? Contact the internal tools team — or inspect the page source for additional clues.</small>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

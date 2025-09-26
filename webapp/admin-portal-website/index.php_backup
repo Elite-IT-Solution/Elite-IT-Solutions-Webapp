@@ -1,0 +1,35 @@
+<?php
+session_start();
+
+// Hardcoded credentials (for demo)
+$USERNAME = "admin";
+$PASSWORD = "admin";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $user = $_POST['username'] ?? '';
+    $pass = $_POST['password'] ?? '';
+    if ($user === $USERNAME && $pass === $PASSWORD) {
+        $_SESSION['logged_in'] = true;
+        header('Location: protected.php'); // or your home page
+        exit;
+    } else {
+        $error = "Invalid username or password";
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h2>Please log in</h2>
+<?php if (!empty($error)) echo "<p style='color:red'>$error</p>"; ?>
+<form method="post">
+    Username: <input type="text" name="username"><br><br>
+    Password: <input type="password" name="password"><br><br>
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>
