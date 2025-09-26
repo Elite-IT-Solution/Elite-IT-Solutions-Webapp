@@ -6,7 +6,7 @@ Welcome to the Elite-IT-Solution GitHub page. Here, you will find the applicatio
 Main website
 ![Alt text](images/main.png)
 
-Admin-portal website
+Admin-portal website<br>
 The credentials can be found inside webapp/admin-portal-website/index.php
 ![Alt text](images/admin-portal.png)
 
